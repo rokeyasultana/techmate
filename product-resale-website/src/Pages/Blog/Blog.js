@@ -24,8 +24,15 @@ const Blog = () => {
                 <div class="card w-96 ">
   <figure><img src="" alt="" /></figure>
   <div class="card-body">
-    <h2 class="text-left text-xl font-semibold"></h2>
-    <p></p>
+    <h2 class="text-left text-xl font-semibold">How does prototypical inheritance work?</h2>
+    <p className='text-left'>JavaScript prototype inheritance is mechanism that allows us to create new classes on the basis of already existing classes.<br></br>
+    *To reuse the methods is used in class expressions.
+*To reuse the methods and variables.
+*Extends keyword is used in class expressions.
+*To acquire all the properties and behavior.
+*Prototype based approach to achieve inheritance.
+    
+    </p>
    
   </div>
 </div>
