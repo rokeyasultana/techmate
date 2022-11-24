@@ -39,8 +39,10 @@ const Blog = () => {
                 <div class="card w-96 ">
   <figure><img src="" alt="" /></figure>
   <div class="card-body">
-    <h2 class="text-left text-xl font-semibold"></h2>
-    <p></p>
+    <h2 class="text-left text-xl font-semibold">What is a unit test? Why should we write unit tests?</h2>
+    <p className='text-left'>A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. The isolated part of the definition is important.<br></br>
+    For Test-Driven Development (TDD), you write unit tests before writing any implementation. This makes your implementation details in your code shorter and easier to understand. In this instance, the best time to write unit tests is immediately. For others, most developers write unit tests after the code's been written.
+    </p>
    
   </div>
 </div>
