@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div className=''>
-      <nav id='navBg' className="bg-white text-black ">
+      <nav id='navBg' className="bg-white text-white ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -25,21 +25,21 @@ const Navbar = () => {
                 <div className=" flex justify-center ml-96    space-x-4">
                   <Link to='/'
                    
-                    className="text-black  hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-white  hover:text-skyBlue-500 px-3 py-2 rounded-md text-sm font-medium"
                   >
                   Home
                   </Link>
 
                   <Link
                   to='/blog'
-                    className=" text-black  hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
                   >
                  Blog
                   </Link>
 
                   <Link to='/login'
                  
-                    className=" text-black  hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
                   >
             Login
                   </Link>
@@ -107,21 +107,21 @@ const Navbar = () => {
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link
                 to='/'
-                  className="hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
+                  className=" block px-3 py-2 rounded-md text-base text-white font-medium"
                 >
                Home
                 </Link>
 
                 <Link
                  to='/blog'
-                  className="text-black hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-white   block px-3 py-2 rounded-md text-base font-medium"
                 >
               Blog
                 </Link>
 
                 <Link 
           to='/login'
-                  className="text-black hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-white  block px-3 py-2 rounded-md text-base font-medium"
                 >
                 Login
                 </Link>

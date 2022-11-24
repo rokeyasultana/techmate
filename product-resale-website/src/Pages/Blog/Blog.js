@@ -9,9 +9,10 @@ const Blog = () => {
            
 
             <div >
-                <div className='justify-center justify-items-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-3 mt-[-130px] bg-slate-50 ml-28 mr-28 mb-28'>
-                <div class="card w-96 ">
-  <figure><img src="" alt="" /></figure>
+                <div className='justify-center justify-items-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-3 mt-[-130px] bg-slate-50 ml-16 mr-16 mb-28'>
+                
+                <div class="card w-96 mt-5">
+
   <div class="card-body">
     <h2 class="text-left text-xl font-semibold"> What are the different ways to manage a state in a React application?</h2>
     <p className='text-left'>There are different ways to manage a state a React Application. Here are ways:<br></br>
@@ -21,23 +22,23 @@ const Blog = () => {
    
   </div>
 </div>
-                <div class="card w-96 ">
-  <figure><img src="" alt="" /></figure>
+                <div class="card w-96 mt-5">
+
   <div class="card-body">
     <h2 class="text-left text-xl font-semibold">How does prototypical inheritance work?</h2>
     <p className='text-left'>JavaScript prototype inheritance is mechanism that allows us to create new classes on the basis of already existing classes.<br></br>
-    *To reuse the methods is used in class expressions.
-*To reuse the methods and variables.
-*Extends keyword is used in class expressions.
-*To acquire all the properties and behavior.
-*Prototype based approach to achieve inheritance.
+    * To reuse the methods is used in class expressions.<br></br>
+* To reuse the methods and variables.<br></br>
+* Extends keyword is used in class expressions.<br></br>
+* To acquire all the properties and behavior.<br></br>
+* Prototype based approach to achieve inheritance.<br></br>
     
     </p>
    
   </div>
 </div>
                 <div class="card w-96 ">
-  <figure><img src="" alt="" /></figure>
+ 
   <div class="card-body">
     <h2 class="text-left text-xl font-semibold">What is a unit test? Why should we write unit tests?</h2>
     <p className='text-left'>A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. The isolated part of the definition is important.<br></br>
@@ -47,10 +48,12 @@ const Blog = () => {
   </div>
 </div>
                 <div class="card w-96 ">
-  <figure><img src="" alt="" /></figure>
+  
   <div class="card-body">
-    <h2 class="text-left text-xl font-semibold"> </h2>
-    <p></p>
+    <h2 class="text-left text-xl font-semibold">  React vs. Angular vs. Vue?</h2>
+    <p>
+
+    </p>
    
   </div>
 </div>
