@@ -1,0 +1,10 @@
+#blog{
+    background-image: url(https://static.ucloud.cn/fe56bab5224e47c8858d1c550ded8984.png);
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+#blogH2{
+    margin: auto;
+    width: 50%;
+    padding: 70px;
+}
