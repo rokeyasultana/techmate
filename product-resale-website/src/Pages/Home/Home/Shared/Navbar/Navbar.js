@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div>
-      <nav className="bg-white text-black">
+      <nav className="bg-white text-black ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex md:hidden bg-blue-300" >
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
