@@ -1,12 +1,21 @@
 import { Transition } from '@headlessui/react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../../assets/logo/logo.png'
+import { AuthContext } from '../../../../../contexts/AuthProvider/AuthProvider';
 import './Navbar.css';
 
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(err => console.log(err));
+}
+
+    
 
     return (
         <div className=''>
@@ -37,12 +46,18 @@ const Navbar = () => {
                  Blog
                   </Link>
 
-                  <Link to='/login'
+                  {user?.uid ?
+            <>
+               
+            <button  className=" text-white  px-3 py-2 rounded-md text-sm font-medium" onClick={handleLogOut}>Sign out</button>
+            </>
+            :<Link to='/login'
                  
-                    className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
-                  >
-            Login
-                  </Link>
+            className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
+          >
+ Sign in
+          </Link>}
+                  
                 </div>
               </div>
             </div>
@@ -119,12 +134,18 @@ const Navbar = () => {
               Blog
                 </Link>
 
-                <Link 
-          to='/login'
-                  className="text-white  block px-3 py-2 rounded-md text-base font-medium"
-                >
-                Login
-                </Link>
+               
+                {user?.uid ?
+            <>
+               
+                <li><button onClick={handleLogOut}>Sign out</button></li>
+            </>
+            :<Link to='/login'
+                 
+            className=" text-white  px-3 py-2 rounded-md text-sm font-medium"
+          >
+ Sign in
+          </Link>}
 
             
 
