@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Details = ({category}) => {
+const Details = ({category,setProduct}) => {
  
   console.log(category);
   const {id,model,img,resalePrice,originalPrice,details,used,seller,location,postedTime} = category;
@@ -25,7 +25,10 @@ const Details = ({category}) => {
     </p>
    
     <div class="card-actions">
-      <button class="btn btn-outline">Book Now</button>
+    <label 
+     onClick={() => setProduct(category)}
+    htmlFor="my-booking" 
+    className="btn btn-outline">Book now</label>
     </div>
   </div>
 </div>

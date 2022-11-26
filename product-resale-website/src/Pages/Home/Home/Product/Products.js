@@ -1,14 +1,19 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
 
 const Products = () => {
-    const[products,setProducts] = useState([]);
+   
     
-    useEffect(()=>{
+const {data:products = []} = useQuery({
+    queryKey:['products'],
+    queryFn: () =>
         fetch('http://localhost:5000/products')
         .then(res=>res.json())
-        .then(data => setProducts(data));
-    },[]);
+    
+})
+
+
     
     return (
         <div>
