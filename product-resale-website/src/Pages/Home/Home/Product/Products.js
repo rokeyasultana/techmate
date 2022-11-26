@@ -13,7 +13,7 @@ const Products = () => {
     return (
         <div>
             <div>
-          <h2 className='justify-center justify-items-center text-6xl  text-center  font-sans  mt-7'>Products</h2>
+          <h2 className=' text-6xl  text-center  font-sans  mt-7'>Products</h2>
             <div  className='justify-center justify-items-center grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5  gap-4 '>
                 {
                    products.map(product =><Product

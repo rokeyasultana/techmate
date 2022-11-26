@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
     
@@ -9,10 +10,10 @@ const Product = ({product}) => {
   <figure><img style={{width:'500px',height:'300px'}}  src={img}alt="perfume" /></figure>
   <div class="card-body ">
     <h2 class="text-center text-blue-500 text-2xl font-bold">{name}</h2>
-    <div class="card-actions justify-end">
+    <Link to={`/products/${_id}`} class="card-actions justify-end">
       <button 
       class="btn btn-outline ">All products</button>
-    </div>
+    </Link>
   </div>
 </div>
    </div>

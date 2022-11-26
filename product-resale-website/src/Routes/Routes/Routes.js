@@ -5,6 +5,7 @@ import ErrorElement from "../../Pages/ErrorElement/ErrorElement";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import SignUp from "../../Pages/Login/SignUp/SignUp";
+import ProductDetails from "../../Pages/ProductDetails/ProductDetails";
 
 
  const router= createBrowserRouter([
@@ -16,6 +17,11 @@ import SignUp from "../../Pages/Login/SignUp/SignUp";
             {
                 path: '/',
                 element:<Home></Home>
+            },
+            {
+                path: '/products/:id',
+                element:<ProductDetails></ProductDetails>,
+                loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
             },
             {
                 path: '/blog',
