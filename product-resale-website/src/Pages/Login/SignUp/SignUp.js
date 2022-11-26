@@ -92,7 +92,7 @@ const SignUp = () => {
 
 
 
-                <input className='btn btn-outline w-full text-blue-500 mt-4' value="Sign Up" type="submit" />
+                <input className='btn  btn-outline w-full text-blue-500 mt-4' value="Sign Up" type="submit" />
                 {signUpError && <p className='text-red-600'>{signUpError}</p>}
             </form>
             <p>Already have an account? <Link className='text-blue-500' to="/login">Please sign in</Link></p>

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 const BookingModal = ({product,setProduct}) => {
+
+    const {user} = useContext(AuthContext);
 
 
 console.log(product.model);
@@ -40,9 +43,11 @@ const handleBooking = event => {
                    
                        
                         <input name="name" type="text"
-                       placeholder="Your Name" className="input w-full input-bordered" />
+                       placeholder="Your Name" 
+                       defaultValue={user?.displayName} disabled
+                       className="input w-full input-bordered" />
                         <input name="email" type="email"
-                 
+                 defaultValue={user?.email} disabled
                     placeholder="Email Address" className="input w-full input-bordered" />
                         <input name="phone" type="text" placeholder="Phone Number" className="input w-full input-bordered" />
                         <input name="location" type="text" placeholder="Meeting location" className="input w-full input-bordered" />

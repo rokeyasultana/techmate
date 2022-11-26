@@ -12,7 +12,7 @@ const Product = ({product}) => {
     <h2 class="text-center text-blue-500 text-2xl font-bold">{name}</h2>
     <Link to={`/products/${_id}`} class="card-actions justify-end">
       <button 
-      class="btn btn-outline ">All products</button>
+      class="btn btn-outline  ">All products</button>
     </Link>
   </div>
 </div>
