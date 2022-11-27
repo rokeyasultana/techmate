@@ -9,7 +9,7 @@ const Blog = () => {
            
 
             <div >
-                <div className='justify-center justify-items-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-3 mt-[-130px] bg-slate-50 ml-16 mr-16 mb-28'>
+                <div className='justify-center justify-items-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10 mt-[-130px] bg-slate-50 ml-16 mr-16 mb-28'>
                 
                 <div class="card w-96 mt-5">
 
@@ -51,8 +51,8 @@ const Blog = () => {
   
   <div class="card-body">
     <h2 class="text-left text-xl font-semibold">  React vs. Angular vs. Vue?</h2>
-    <p>
-
+    <p className='text-left'>
+    Because React just provides one view, it is not appropriate for building an MVC architecture: you must solve the model and controller yourself. Besides this, there are only advantages and lots of advantages.Angular.js is an MVC framework. A major disadvantage of Angular is that it uses a regular DOM, and thus, the entire tree structure of the HTML tags is updated, which massively impacts the loading time.Vue.js is a JavaScript-based progressive framework for creating single-page applications. It was created with scalability and incrementality in mind, as well as ease of integration with other view layer frameworks. 
     </p>
    
   </div>
