@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was tailwind css with [Create React App]
+This project TechMate was tailwind css with [Create React App]
 
 ## Usage for this project
 
@@ -16,3 +16,7 @@ This project was tailwind css with [Create React App]
 
 
 ### live site: <a href="https://soft-haupia-accf8f.netlify.app/"> TechMate</a> 
+
+###
+Admin : mina@gmail.com
+password: 123Mina@@
