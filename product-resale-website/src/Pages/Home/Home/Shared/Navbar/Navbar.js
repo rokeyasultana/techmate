@@ -139,7 +139,7 @@ const Navbar = () => {
                 {user?.uid ?
             <>
              <Link  className=" text-white  px-3 py-2 rounded-md text-sm font-medium" to="/dashboard">Dashboard</Link>
-                <li><button onClick={handleLogOut}>Sign out</button></li>
+        <button onClick={handleLogOut}>Sign out</button>
             </>
             :<Link to='/login'
                  

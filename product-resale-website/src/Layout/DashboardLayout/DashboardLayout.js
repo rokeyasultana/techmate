@@ -35,9 +35,8 @@ const DashboardLayout = () => {
   <Link  className='mb-5 font-bold text-blue-500' to= '/dashboard/addProduct'>Add Product</Link>
 {
   isAdmin && <>
-<Link  className='mb-5 font-bold text-blue-500'  to='/dashboard/seller'>All Seller</Link> 
+  <Link  className='mb-5 font-bold text-blue-500'  to='/dashboard/seller'>All Seller</Link> 
   <Link className='mb-5 font-bold text-blue-500' to='/dashboard/buyer'>All Buyers</Link>
-  
   </>
 }
 

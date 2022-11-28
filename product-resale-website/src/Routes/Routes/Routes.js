@@ -62,22 +62,28 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 },
 {
     path:'/dashboard/buyer',
-    element:<ALLBuyers></ALLBuyers>
-},
-{
-    path:'/dashboard/seller',
-    element:<ALLSellers></ALLSellers>
-},
-{
-    path:'/dashboard/addProduct',
     element:<AdminRoute>
-        <AddProduct></AddProduct>
+        <ALLBuyers></ALLBuyers>
     </AdminRoute>
 },
 {
-    path:'/dashboard/allUsers',
+    path:'/dashboard/seller',
+    element:<AdminRoute>
+        <ALLSellers></ALLSellers>
+    </AdminRoute>
+},
+{
+    path:'/dashboard/addProduct',
     element:
-        <AllUsers></AllUsers>
+        <AddProduct></AddProduct>
+   
+},
+{
+    path:'/dashboard/allUsers',
+    element:<AdminRoute>
+   <AllUsers></AllUsers>
+    </AdminRoute>
+     
    
 },
 
