@@ -8,6 +8,7 @@ const Login = () => {
 
     const {providerLogin,signIn} = useContext(AuthContext)
     const [loginError, setLoginError] = useState('');
+    const [loginUserEmail,setLoginUserEmail] = useState('')
     const location = useLocation();
     const navigate = useNavigate();
     const googleProvider =new GoogleAuthProvider();

@@ -106,6 +106,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
+         
         </div>
 
         <Transition
@@ -151,9 +152,13 @@ const Navbar = () => {
 
              
               </div>
+             
+          
             </div>
+                 
           )}
         </Transition>
+        <label htmlFor="dashboard-drawer" className="btn btn-outline btn-accent drawer-button lg:hidden">Open drawer</label>
       </nav>
 
         </div>

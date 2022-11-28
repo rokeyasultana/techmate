@@ -1,13 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider'
 import toast, { Toaster } from 'react-hot-toast';
+import useToken from '../../../hooks/useToken';
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
-    const [signUpError, setSignUPError] = useState('')
- 
+    const [signUpError, setSignUPError] = useState('');
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const[token] = useToken(createdUserEmail);
+ const navigate = useNavigate();
+ if(token){
+    navigate('/');
+ }
 
     const handleSignUp = (data) => {
 
@@ -20,20 +26,43 @@ const SignUp = () => {
                 console.log(user);
                 toast('User Created Successfully.')
                 const userInfo = {
+                    displayEmail:data.email,
                     displayName: data.name,
                     displayRole:data.role 
 
                 }
                 console.log(userInfo );
                 updateUser(userInfo)
-                    .then(() => { })
+                    .then(() => { 
+                 saveUser(data.name,data.email,data.role)
+                    })
                     .catch(err => console.log(err));
             })
             .catch(error => {
                 console.log(error)
                 setSignUPError(error.message)
+       
             });
     }
+
+    const saveUser = (name,email,role) =>{
+       const user = {name,email,role} ;
+
+       fetch('https://products-resale-website-server.vercel.app/users',{
+        method: 'POST',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+       })
+
+       .then(res => res.json())
+       .then(data => {
+       setCreatedUserEmail(email);
+       })
+    };
+
+   
     return (
         <div>
                 <div>
