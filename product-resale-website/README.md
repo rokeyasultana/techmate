@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was tailwind css with [Create React App]
+This project TechMate was tailwind css with [Create React App]
 
 ## Usage for this project
 
