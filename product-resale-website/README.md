@@ -18,5 +18,5 @@ This project was tailwind css with [Create React App]
 ### live site: <a href="https://soft-haupia-accf8f.netlify.app/"> TechMate</a> 
 
 ###
-Admin : tasnimtasmiya@gmail.com
-password: 123Tasnim@@
+Admin : mina@gmail.com
+password: 123Mina@@
