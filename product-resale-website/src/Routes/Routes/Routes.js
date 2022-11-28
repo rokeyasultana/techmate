@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../../Layout/DashboardLayout/DashboardLayout";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import ErrorElement from "../../Pages/ErrorElement/ErrorElement";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
@@ -24,7 +26,7 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
                 element:<PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
-                loader:({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+                loader:({params})=> fetch(`https://products-resale-website-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/blog',
@@ -39,6 +41,22 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
                 element:<SignUp></SignUp>
             },
         ]
-    }
+    },
+    {
+        path: '/dashboard',
+        element:<PrivateRoute>
+  <DashboardLayout></DashboardLayout>
+        </PrivateRoute>,
+     
+    
+   children:[
+{
+    path:'/dashboard',
+    element:<Dashboard></Dashboard>
+}
+
+
+   ]
+         }
 ])
 export default router;

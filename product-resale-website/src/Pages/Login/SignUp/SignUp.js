@@ -11,9 +11,9 @@ const SignUp = () => {
 
     const handleSignUp = (data) => {
 
-        console.log(data);
+        // console.log(data);
         setSignUPError('');
-        createUser(data.email, data.password )
+        createUser(data.email, data.password, data.role )
 
             .then(result => {
                 const user = result.user;
@@ -21,9 +21,10 @@ const SignUp = () => {
                 toast('User Created Successfully.')
                 const userInfo = {
                     displayName: data.name,
-                  
+                    displayRole:data.role 
 
                 }
+                console.log(userInfo );
                 updateUser(userInfo)
                     .then(() => { })
                     .catch(err => console.log(err));

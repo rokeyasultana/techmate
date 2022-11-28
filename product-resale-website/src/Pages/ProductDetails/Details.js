@@ -2,7 +2,7 @@ import React from 'react';
 
 const Details = ({category,setProduct}) => {
  
-  console.log(category);
+  // console.log(category);
   const {id,model,img,resalePrice,originalPrice,details,used,seller,location,postedTime} = category;
     return (
         <div>

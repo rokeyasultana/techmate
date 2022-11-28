@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Product from './Product';
 
 const Products = () => {
@@ -8,7 +8,7 @@ const Products = () => {
 const {data:products = []} = useQuery({
     queryKey:['products'],
     queryFn: () =>
-        fetch('http://localhost:5000/products')
+        fetch('https://products-resale-website-server.vercel.app/products')
         .then(res=>res.json())
     
 })

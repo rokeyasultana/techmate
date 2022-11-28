@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
@@ -13,11 +14,11 @@ const {model,resalePrice} =product;
 const handleBooking = event => {
     event.preventDefault();
     const form = event.target;
-    const location = form.location.value;
     const name = form.name.value;
     const email = form.email.value;
     const phone = form.phone.value;
-   
+    const location = form.location.value;
+
     const booking = {
         product: model,
         resalePrice:resalePrice,
@@ -26,8 +27,27 @@ const handleBooking = event => {
         phone,
         location
     }
-    console.log(booking);
-    setProduct(null);
+   
+    fetch('https://products-resale-website-server.vercel.app/bookings', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(booking)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if (data.acknowledged) {
+                setProduct(null);
+                toast.success('Booking confirmed');
+          
+            }
+            else{
+                toast.error(data.message);
+            }
+        })
+
 }
 
     return (
@@ -55,6 +75,7 @@ const handleBooking = event => {
                         <input className='btn btn-success w-full' type="submit" value="Submit" />
                     </form>
                 </div>
+                <Toaster/>
             </div>
         </>
     );
