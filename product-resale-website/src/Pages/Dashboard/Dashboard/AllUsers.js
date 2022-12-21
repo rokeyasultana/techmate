@@ -13,24 +13,12 @@ const AllUsers = () => {
         }
     }) 
     const handleMakeAdmin = id => {
-        fetch(`https://products-resale-website-server.vercel.app/users/admin/${id}`,{
-            method:'PUT',
-            headers: {
-                authorization:`bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-        .then(res => res.json())
-        .then(data =>{
-                    if(data.modifiedCount > 0){
-                toast.success('Make admin successfully')
-                refetch()
-            }
-        })
+       console.log(id);
     }
     return (
         <div>
          <div>
-            <h2 className="text-3xl">All Users</h2>
+            <h2 className='text-5xl text-center font-semibold mt-9 mb-9 text-blue-400'>All Users</h2>
             <div className="overflow-x-auto">
   <table className="table w-full">
     <thead>
@@ -49,12 +37,11 @@ const AllUsers = () => {
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>
-               {
-                user?.role !== 'admin' && <button  
+         <button  
                 
                 onClick={()=> handleMakeAdmin(user._id)}
                 className='btn btn-xs btn-outline  btn-success'>Make Admin</button>
-               }
+               
                 
                 </td>
             <td><button  className='btn btn-xs btn-outline  btn-error'>Delete</button></td>

@@ -16,13 +16,17 @@ const {data: sellers = []} =useQuery({
 
     return (
         <div>
+           <div>
+                <h2 className='text-5xl text-center font-semibold mt-9 mb-9 text-blue-400'>All Sellers</h2>
+            </div>
            <table className="table w-full">
     <thead>
       <tr>
       
       <th></th>
         <th>Name</th>
-        <th>Email</th>
+       <th>Email</th> 
+       <th>Verify</th> 
         <th>Delete</th>
         
       </tr>
@@ -33,7 +37,9 @@ const {data: sellers = []} =useQuery({
             <th>{i+1}</th>
             <td>{seller.name}</td>
             <td>{seller.email}</td>
-            
+            <td>
+            <button  className='btn btn-xs btn-outline  btn-success'>Verify</button>
+            </td>
             <td><button  className='btn btn-xs btn-outline  btn-error'>Delete</button></td>
           
           </tr>)

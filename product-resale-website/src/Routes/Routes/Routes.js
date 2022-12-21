@@ -2,18 +2,20 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../../Layout/DashboardLayout/DashboardLayout";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
-import AllUsers from "../../Pages/Dashboard/AllUsers";
+
 import AddProduct from "../../Pages/Dashboard/Dashboard/AddProduct";
 import ALLBuyers from "../../Pages/Dashboard/Dashboard/ALLBuyers";
-import Buyers from "../../Pages/Dashboard/Dashboard/ALLBuyers";
 import ALLSellers from "../../Pages/Dashboard/Dashboard/ALLSellers";
+import AllUsers from "../../Pages/Dashboard/Dashboard/AllUsers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
+import MyOder from "../../Pages/Dashboard/Dashboard/MyOder";
+
 import ErrorElement from "../../Pages/ErrorElement/ErrorElement";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import SignUp from "../../Pages/Login/SignUp/SignUp";
 import ProductDetails from "../../Pages/ProductDetails/ProductDetails";
-import AdminRoute from "../AdminRoute/AdminRoutes";
+
 import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 
 
@@ -62,15 +64,15 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 },
 {
     path:'/dashboard/buyer',
-    element:<AdminRoute>
+    element:
         <ALLBuyers></ALLBuyers>
-    </AdminRoute>
+  
 },
 {
     path:'/dashboard/seller',
-    element:<AdminRoute>
+    element:
         <ALLSellers></ALLSellers>
-    </AdminRoute>
+ 
 },
 {
     path:'/dashboard/addProduct',
@@ -80,11 +82,13 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 },
 {
     path:'/dashboard/allUsers',
-    element:<AdminRoute>
+    element:
    <AllUsers></AllUsers>
-    </AdminRoute>
-     
-   
+},
+{
+    path:'/dashboard/myOrders',
+    element:<MyOder></MyOder>
+
 },
 
 
